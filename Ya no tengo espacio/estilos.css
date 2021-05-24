@@ -1,0 +1,220 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+}
+.menu{
+    width: 100%;
+    height: 100px;
+}
+.fondo{
+    width: 1000px;
+    height: 500px;
+}
+.contenedor{
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 1000px;
+    height: 85%;
+    position: absolute;
+    border: solid green;
+}
+.a{
+   text-decoration: none;
+   color: #fff;
+   border-radius: 50%;
+   background-color: black;
+   width: 10%;
+   height: 10%;
+   transition: 0.7s;
+}
+.subcontenedor{
+    text-align: right;
+    word-spacing: 30px;
+}
+.a:hover{
+    background-color: #00FF00;
+}
+.burbuja{
+    border-radius: 70%;
+    background: #00FF00;
+    opacity: .3;
+
+    position: absolute;
+    bottom: -150;
+    
+    animation: burbujas 3s linear infinite ;
+}
+
+.burbuja:nth-child(1){
+    width: 80px;
+    height: 80px;
+    left: 5%;
+    animation-duration: 3s;
+    animation-delay: 3s;
+}
+
+.burbuja:nth-child(2){
+    width: 100px;
+    height: 100px;
+    left: 35%;
+    animation-duration: 3s;
+    animation-delay: 5s;
+}
+
+.burbuja:nth-child(3){
+    width: 20px;
+    height: 20px;
+    left: 15%;
+    animation-duration: 1.5s;
+    animation-delay: 7s;
+}
+.burbuja:nth-child(4){
+    width: 50px;
+    height: 50px;
+    left: 90%;
+    animation-duration: 6s;
+    animation-delay: 3s;
+}
+
+.burbuja:nth-child(5){
+    width: 70px;
+    height: 70px;
+    left: 65%;
+    animation-duration: 3s;
+    animation-delay: 1s;
+}
+
+.burbuja:nth-child(6){
+    width: 20px;
+    height: 20px;
+    left: 50%;
+    animation-duration: 4s;
+    animation-delay: 5s;
+}
+
+.burbuja:nth-child(7){
+    width: 20px;
+    height: 20px;
+    left: 50%;
+    animation-duration: 4s;
+    animation-delay: 5s;
+}
+
+.burbuja:nth-child(8){
+    width: 100;
+    height: 100px;
+    left: 52%;
+    animation-duration: 5s;
+    animation-delay: 5s;
+}
+
+.burbuja:nth-child(9){
+    width: 65px;
+    height: 65px;
+    left: 51%;
+    animation-duration: 3s;
+    animation-delay: 2s;
+}
+
+.burbuja:nth-child(10){
+    width: 40px;
+    height: 40px;
+    left: 35%;
+    animation-duration: 3s;
+    animation-delay: 4s;
+}
+
+
+@keyframes burbujas{
+    0%{
+        bottom: 0;
+        opacity: 0;
+    }
+    30%{
+        transform: translateX(30px);
+    }
+    50%{
+        opacity: .4;
+    }
+    100%{
+        bottom: 100vh;
+        opacity: 0;
+    }
+}
+
+@keyframes movimiento{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(30px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+.boton{
+    background: transparent;
+    border: solid #00aae4;
+    color: #fff;
+    width: 100px;
+    height: 30px;
+    transition: 0.7s;
+}
+.boton:hover{
+    background: #00aae4;
+    border: solid #f0f0f0f0;
+    width: 100px;
+    height: 30px;
+    color: #000;
+}
+.CP{
+    position: absolute;
+    background: #222;
+    color: #fff;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+}
+.CA{
+    margin: auto;
+    width: 350px;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    position: relative;
+}
+.CA:before{
+    content: "";
+    position: absolute;
+    background: green;
+    width: 0px;
+    height: 30px;
+    animation: preloader 10s infinite;
+}
+.CA p{
+ margin: 0;
+ line-height: 30px;
+ font-size: 25px;
+ font-weight: bold;
+ position: absolute;
+ left: 50%;
+ transform: translateX(-50%);
+}
+@keyframes preloader{
+    90%{
+        width: 100%;
+        opacity: 1;
+    }
+    100%{
+        width: 100%;
+        opacity: 0;
+    }
+}
+.cerrar{
+    transform: translateX(-100%);
+    transition: all 0.8s;
+}
